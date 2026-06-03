@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS blacklist (
+    id SERIAL PRIMARY KEY,
+
+    user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+
+    entity_type VARCHAR(50) NOT NULL,
+
+    entity_value VARCHAR(255) NOT NULL,
+
+    reason TEXT,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

@@ -1,0 +1,5 @@
+ALTER TABLE transactions
+ADD COLUMN IF NOT EXISTS entity_type VARCHAR(50);
+
+ALTER TABLE transactions
+ADD COLUMN IF NOT EXISTS entity_value VARCHAR(255);

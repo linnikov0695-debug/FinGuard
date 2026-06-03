@@ -1,0 +1,18 @@
+-- ALERTS TABLE
+CREATE TABLE IF NOT EXISTS alerts (
+  id SERIAL PRIMARY KEY,
+
+  user_id INTEGER NOT NULL
+    REFERENCES users(id)
+    ON DELETE CASCADE,
+
+  transaction_id INTEGER NOT NULL
+    REFERENCES transactions(id)
+    ON DELETE CASCADE,
+
+  type VARCHAR(50) NOT NULL,
+  risk_level VARCHAR(20) NOT NULL,
+  message TEXT NOT NULL,
+  
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
