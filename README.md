@@ -126,10 +126,30 @@ Utilities
 - Prettier
 
 ⸻
+### System Architecture
 
-## Architecture Overview
+```mermaid
+flowchart TD
+    Client[Client / API Consumer] --> Routes[Express Routes]
+    Routes --> Middleware[Middleware<br/>Auth / Validation / Rate Limiting]
+    Middleware --> Controllers[Controllers]
+    Controllers --> Services[Services]
 
-FinGuard follows a Modular Monolith architecture.
+    Services --> Transactions[Transactions Module]
+    Services --> Risk[Rule-Based Risk Engine]
+    Services --> Alerts[Alerts Module]
+    Services --> Cases[Cases Module]
+    Services --> Blacklist[Blacklist Module]
+    Services --> AuditLogs[Audit Logs Module]
+
+    Transactions --> Database[(PostgreSQL)]
+    Alerts --> Database
+    Cases --> Database
+    Blacklist --> Database
+    AuditLogs --> Database
+
+    Risk --> Alerts
+```
 
 ### Request Flow
 
