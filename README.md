@@ -19,6 +19,7 @@ Its purpose is to showcase backend architecture, security awareness, auditabilit
 FinGuard is an educational and portfolio project.
 
 This project:
+
 - Uses synthetic/demo data only.
 - Does not connect to real banks or payment systems.
 - Is not a real fraud detection platform.
@@ -43,6 +44,7 @@ Rather than solving real-world financial problems, the project focuses on demons
 ## Features
 
 Authentication
+
 - User registration
 - User login
 - JWT-based authentication
@@ -50,17 +52,20 @@ Authentication
 - Password hashing with bcrypt
 
 Transaction Monitoring
+
 - Transaction creation
 - Transaction history
 - Ownership-based access control
 
 Rule-Based Risk Engine
+
 - Transaction evaluation
 - Alert generation
 - Multiple risk rules
 - Extensible architecture for future rules
 
 Alerts
+
 - Automatic alert creation
 - Alert status workflow
 - Pagination
@@ -68,20 +73,24 @@ Alerts
 - Sorting
 
 Cases
+
 - Case creation
 - Case status management
 - Alert-to-case relationship
 
 Blacklist
+
 - Blacklist entity management
 - Blacklist-based risk detection
 
 Audit Logs
+
 - Audit trail generation
 - Entity change tracking
 - User action tracking
 
 Security-Aware Design
+
 - Authentication
 - Authorization
 - Input validation
@@ -89,6 +98,7 @@ Security-Aware Design
 - Secure configuration practices
 
 Automated Testing
+
 - Integration testing
 - Module-based test structure
 - API validation
@@ -98,34 +108,42 @@ Automated Testing
 ## Tech Stack
 
 Backend
+
 - Node.js
 - Express
 
 Database
+
 - PostgreSQL
 - pg
 
 Authentication
+
 - JWT
 - bcrypt
 
 Validation
+
 - Zod
 
 Security
+
 - Helmet
 - CORS
 - express-rate-limit
 
 Testing
+
 - Jest
 - Supertest
 
 Utilities
+
 - dotenv
 - Prettier
 
 ⸻
+
 ### System Architecture
 
 ```mermaid
@@ -155,8 +173,8 @@ flowchart TD
 
 Client → Routes → Middleware → Controllers → Services → PostgreSQL
 
-
 ### Design principles:
+
 - Controllers contain no SQL
 - Services contain business logic
 - Validation is handled through middleware
@@ -169,38 +187,45 @@ Client → Routes → Middleware → Controllers → Services → PostgreSQL
 ## Core Modules
 
 ### Authentication
+
 - User registration
 - User login
 - JWT authentication
 - Protected routes
 
 ### Transactions
+
 - Transaction creation
 - Transaction validation
 - User ownership checks
 
 ### Risk Engine
+
 - Rule-based risk evaluation
 - Alert generation
 - Risk classification
 
 ### Alerts
+
 - Alert creation
 - Status management
 - Filtering and pagination
 
 ### Cases
+
 - Investigation workflow
 - Alert escalation
 
 ### Blacklist
+
 - Blacklisted entity management
 - Blacklist matching rules
 
 ### Audit Logs
+
 - Security event tracking
 - Audit trail generation
-⸻
+  ⸻
 
 ## Risk Engine
 
@@ -235,6 +260,7 @@ Triggered when a user already has multiple open high-risk alerts.
 ## Security Features
 
 Implemented security controls:
+
 - bcrypt password hashing
 - JWT authentication
 - Protected routes
@@ -310,15 +336,15 @@ Never commit real secrets to source control.
 
 - Run all migrations
 
-    npm run migrate
+  npm run migrate
 
--  Run seed files
+- Run seed files
 
-    npm run seed
+  npm run seed
 
--  Migrations files are stored in:
+- Migrations files are stored in:
 
-    src/db/migrations
+  src/db/migrations
 
 Each database change is added as a separate migration file.
 
@@ -327,36 +353,36 @@ Each database change is added as a separate migration file.
 ## Running the Project Locally:
 
 - Install Dependencies:
-npm install
+  npm install
 
--  Configure Enviornment Variables:
-Create: .env
-Using: .env.example
+- Configure Enviornment Variables:
+  Create: .env
+  Using: .env.example
 
 - Run Migrations:
-npm run migrate
+  npm run migrate
 
 - Run Seed Data:
-npm run seed
+  npm run seed
 
--  Start Development Server:
-npm run dev
+- Start Development Server:
+  npm run dev
 
--  Start Production Servre:
-npm start
+- Start Production Servre:
+  npm start
 
 ⸻
 
 ## Running Tests:
 
 - Run All Tests:
-npm run test
+  npm run test
 
 - Formate Code:
-npm run format
+  npm run format
 
 - Check Formatting:
-npm run format: check
+  npm run format: check
 
 ⸻
 
@@ -376,7 +402,7 @@ npm run format: check
 "password": "StrongPassword123"
 }
 
--  Create Transaction
+- Create Transaction
 
 Authorization: Bearer <token>
 
@@ -393,6 +419,7 @@ Authorization: Bearer <token>
 ## Design Decisions
 
 Key architectural decisions:
+
 - Modular Monolith architecture
 - Service-layer business logic
 - Route-level validation
@@ -409,6 +436,7 @@ The project prioritizes clarity, maintainability, and learning value over comple
 ## Current Limitations
 
 Current limitations include:
+
 - No frontend dashboard
 - No Docker support yet
 - No CI/CD pipeline yet
@@ -425,7 +453,8 @@ Current limitations include:
 ## Future Improvements
 
 Planned enhancements:
--  Architecture diagram
+
+- Architecture diagram
 - Docker support
 - GitHub Actions CI
 - Frontend dashboard
@@ -453,6 +482,7 @@ MIT License
 ## Educational Use
 
 This project is intended for:
+
 - Learning backend development
 - Portfolio development
 - Backend architecture practice
