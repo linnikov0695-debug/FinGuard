@@ -1,5 +1,7 @@
 # FinGuard
 
+![FinGuard CI](https://github.com/linnikov0695-debug/FinGuard/actions/workflows/ci.yml/badge.svg)
+
 **Status: Active Development**
 
 **Current Version : MVP**
